@@ -1,16 +1,83 @@
-# productos_app
 
-A new Flutter project.
+# 📱 Artefactos Intergas
 
-## Getting Started
+Aplicación móvil Android desarrollada en **Flutter** para visualizar un catálogo de artefactos de calefacción y cocina, categorizados en **Calefones**, **Calderas**, **Calefactores** y **Encimeras**.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📌 Descripción
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+La app permite consultar el precio de venta y valores en cuotas de distintos productos, y en caso de calefones tipo **TF**, añadir un accesorio opcional (**KIT HORIZONTAL**) que suma su valor al total.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Incluye una pantalla inicial de carga (**Splash Screen**) y una barra de búsqueda para calefones.
+
+---
+
+## 📦 Tecnologías utilizadas
+
+- **Flutter SDK**
+- **Dart**
+- **Android SDK**
+- **Visual Studio Code**
+- **Git / GitHub**
+
+---
+
+## 📱 Pantallas de la aplicación
+
+- **Splash Screen**: muestra logo y nombre de la app.
+- **Pantalla Principal**: muestra las categorías de productos.
+- **Pantalla de Productos**: listado de productos por categoría, con barra de búsqueda para calefones.
+- **Pantalla Detalle**: detalle de cada producto, precios y cuotas, con opción de añadir accesorio en calefones TF.
+
+---
+
+## 📌 Instalación y compilación
+
+### Clonar este repositorio:
+
+```bash
+git clone https://github.com/machukeitor1/artefactos_intergas.git
+cd artefactos_intergas
+```
+
+### Instalar dependencias:
+
+```bash
+flutter pub get
+```
+
+### Ejecutar la app:
+
+```bash
+flutter run
+```
+
+### Compilar APK:
+
+```bash
+flutter build apk --release
+```
+
+APK generado en:
+
+```
+/build/app/outputs/flutter-apk/app-release.apk
+```
+
+---
+
+## 📦 Próximas mejoras (v1.2)
+
+- Incorporar imágenes de los productos
+- Descripción detallada de cada artefacto
+- Sistema de stock visible
+- Exportación de cotización a PDF o WhatsApp
+- Integración de base de datos local o Firebase
+
+---
+
+## 📌 Autor
+
+**Creado por Cristian Machuca**  
+📱 *Versión App 1.1*
