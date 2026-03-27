@@ -1,7 +1,7 @@
 
 # 📱 Artefactos Intergas
 
-Aplicación móvil Android desarrollada en **Flutter** para visualizar un catálogo de artefactos de calefacción y cocina, categorizados en **Calefones**, **Calderas**, **Calefactores** y **Encimeras**.
+Aplicación móvil Android desarrollada en **Flutter** para visualizar un catálogo de artefactos de calefacción y cocina, categorizados en **Calefones**, **Calderas**, **Calefactores**, **Encimeras** y **Cocinas**.
 
 ---
 
@@ -67,9 +67,15 @@ APK generado en:
 
 ---
 
-## 📦 Próximas mejoras (v1.2)
+## 🚀 Novedades (v1.2)
 
-- Incorporar imágenes de los productos
+- Incorporación de imágenes en algunos artefactos
+- Se agregó la nueva categoría de **Cocinas**
+
+---
+
+## 📦 Próximas mejoras (v1.3)
+
 - Descripción detallada de cada artefacto
 - Sistema de stock visible
 - Exportación de cotización a PDF o WhatsApp
@@ -80,4 +86,4 @@ APK generado en:
 ## 📌 Autor
 
 **Creado por Cristian Machuca**  
-📱 *Versión App 1.1*
+📱 *Versión App 1.2*

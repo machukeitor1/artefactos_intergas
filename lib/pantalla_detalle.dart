@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'productos_data.dart';
-import 'productos_data.dart';
+import 'pantalla_ar.dart';
 
 
 class PantallaDetalle extends StatefulWidget {
@@ -56,12 +56,75 @@ class _PantallaDetalleState extends State<PantallaDetalle> {
             Text('Precio Venta: \$${totalVenta.toStringAsFixed(0)}',
                 style: const TextStyle(fontSize: 22)),
             const SizedBox(height: 16),
-            Text('Cuotas:', style: const TextStyle(fontSize: 20)),
-            const SizedBox(height: 8),
-            Text('3 cuotas de: \$${totalCuota3.toStringAsFixed(0)}'),
-            Text('6 cuotas de: \$${totalCuota6.toStringAsFixed(0)}'),
-            Text('12 cuotas de: \$${totalCuota12.toStringAsFixed(0)}'),
+            if (widget.producto.categoria != 'Cocina') ...[
+              Text('Cuotas:', style: const TextStyle(fontSize: 20)),
+              const SizedBox(height: 8),
+              Text('3 cuotas de: \$${totalCuota3.toStringAsFixed(0)}'),
+              Text('6 cuotas de: \$${totalCuota6.toStringAsFixed(0)}'),
+              Text('12 cuotas de: \$${totalCuota12.toStringAsFixed(0)}'),
+            ],
             const SizedBox(height: 20),
+            if (widget.producto.imagenUrl != null) ...[
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.image),
+                    label: const Text('VER'),
+                    onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => Scaffold(
+                        backgroundColor: Colors.black,
+                        appBar: AppBar(
+                          backgroundColor: Colors.black,
+                          iconTheme: const IconThemeData(color: Colors.white),
+                        ),
+                        body: InteractiveViewer(
+                          panEnabled: true,
+                          minScale: 1.0,
+                          maxScale: 5.0,
+                          child: Center(
+                            child: Image.network(
+                              widget.producto.imagenUrl!,
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: double.infinity,
+                              loadingBuilder: (context, child, progress) =>
+                                  progress == null
+                                      ? child
+                                      : const Center(child: CircularProgressIndicator(color: Colors.white)),
+                              errorBuilder: (_, __, ___) =>
+                                  const Text('No se pudo cargar la imagen',
+                                      style: TextStyle(color: Colors.white)),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+                  if (widget.producto.arAsset != null) ...[
+                    const SizedBox(width: 12),
+                    ElevatedButton.icon(
+                      icon: const Icon(Icons.view_in_ar),
+                      label: const Text('AR'),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.teal),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => PantallaAR(assetPath: widget.producto.arAsset!),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ],
+              ),
+            ],
             if (esCalefonTF)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

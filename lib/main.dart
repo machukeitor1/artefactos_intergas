@@ -90,9 +90,23 @@ class PantallaPrincipal extends StatelessWidget {
                 );
               },
             ),
+            const SizedBox(height: 16),
+            CategoriaButton(
+              texto: 'Cocina',
+              color: Colors.red,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PantallaProductos(categoria: 'Cocina'),
+                  ),
+                );
+              },
+            ),
             const SizedBox(height: 30),
             const Text(
-              'Creado por Cristian Machuca - Versión App 1.1',
+              'Creado por Cristian Machuca - Versión App 1.2',
               style: TextStyle(fontSize: 14, color: Colors.grey),
               textAlign: TextAlign.center,
             ),

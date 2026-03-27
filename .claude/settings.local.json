@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter --version)",
+      "Bash(./gradlew assembleDebug --no-daemon)",
+      "Bash(./gradlew assembleDebug --no-daemon --stacktrace)",
+      "Bash(where java:*)",
+      "Read(//c/Program Files/Eclipse Adoptium//**)",
+      "Read(//c/Program Files/Microsoft//**)",
+      "Bash(flutter config:*)",
+      "Bash(flutter build:*)",
+      "Bash(flutter pub:*)",
+      "Read(//c/flutter_build/artefactos_intergas/build/app/outputs/flutter-apk/**)"
+    ]
+  }
+}
